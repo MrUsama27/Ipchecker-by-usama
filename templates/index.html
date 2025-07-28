@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>IP Checker (by Usama)</title>
+<title>IP Checker by Usama</title>
+<style>
+       body {
+           background-color: #121212;
+           color: #fff;
+           font-family: Arial, sans-serif;
+           text-align: center;
+           padding-top: 60px;
+       }
+       input[type=text] {
+           padding: 10px;
+           font-size: 16px;
+           width: 250px;
+           margin-top: 15px;
+           border: none;
+           border-radius: 5px;
+       }
+       button {
+           padding: 10px 20px;
+           font-size: 16px;
+           margin-top: 15px;
+           background-color: #1f1f1f;
+           color: white;
+           border: 1px solid #444;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+       p {
+           margin-top: 20px;
+           font-size: 18px;
+           color: #4CAF50;
+       }
+</style>
 </head>
-<body style="background-color:#111; color:#fff; text-align:center; padding-top:100px;">
-<h1>🧠 IP Checker (by Usama)</h1>
-<p>Paste your IP and check for duplicates!</p>
+<body>
+<h1>IP Checker (by Usama)</h1>
+<form method="POST">
+<input type="text" name="ip" placeholder="Enter IP address" required>
+<br>
+<button type="submit">Check</button>
+</form>
+   {% if message %}
+<p>{{ message }}</p>
+   {% endif %}
 </body>
 </html>
